@@ -16,5 +16,7 @@ Nilai dari const harus sudah diketahui saat compile-time, sedangkan nilai final 
 ## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
 1. Membuat flutter project dengan menjalankan command flutter create counter_7
 2. Membuat variabel untuk menyimpan color, string 'GANJIL' atau 'GENAP'.
-3. Membuat function untuk 
-2. Menambahkan floatingActionButton untuk fungsi decrement
+3. Membuat function untuk decrement dan counter.
+4. Menambahkan if statement pada set state di dalam function increment dan decrement untuk menganti string dan color.
+5. Menambahkan floatingActionButton untuk fungsi decrement.
+6. Membuat if statement untuk menampilkan button decrement hanya jika counter tidak nol.
