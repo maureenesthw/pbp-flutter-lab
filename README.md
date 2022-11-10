@@ -6,6 +6,12 @@ Widget dapat berupa stateful atau stateless. Jika widget dapat berubah ketika pe
 ## Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
 - Text: Widget Teks menampilkan string teks dengan gaya tunggal. String mungkin pecah di beberapa baris atau mungkin semua ditampilkan pada baris yang sama tergantung pada batasan layout.
 - Floating Action Button: Ini adalah widget yang mengapung di layar di atas widget lain. Itu muncul sebagai ikon melingkar di layar dengan ikon di tengahnya sebagai anaknya. Ini secara default ditempatkan di sudut kanan bawah layar.
+- Stack: Stack widget adalah widget yang memungkinkan kita untuk membuat widget-widget saling bertumpuk.
+- Positioned: Positioned widget memposisikan widget di atas satu sama lain. Biasanya digunakan untuk memposisikan children widget di widget Stack atau semacamnya.
+- Column: Column widget ini memungkinkan untuk align children secara horizontal dan vertikal sesuai kebutuhan.
+- Center: Center widget menengahkan children-nya di dalam dirinya sendiri.
+- App Bar: AppBar biasanya merupakan komponen paling atas dari aplikasi (atau terkadang paling bawah), ini berisi toolbar dan beberapa action buttons umum lainnya.
+- Scafold: Scaffold adalah class dalam flutter yang menyediakan banyak widget seperti Drawer, SnackBar, BottomNavigationBar, FloatingActionButton, AppBar, dll.
 
 ## Apa fungsi dari setState()? Jelaskan variabel apa saja yang dapat terdampak dengan fungsi tersebut.
 Fungsi setState() yang akan bertugas untuk memberitahu framework bahwa ada object yang berubah pada State, kemudian akan melakukan build ulang pada Widget tersebut.
