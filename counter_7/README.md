@@ -1,3 +1,6 @@
+<details> 
+<summary>Tugas 7: Elemen Dasar Flutter</summary>
+<pre>
 # Tugas 7: Elemen Dasar Flutter
 
 ## Jelaskan apa yang dimaksud dengan stateless widget dan stateful widget dan jelaskan perbedaan dari keduanya.
@@ -28,17 +31,37 @@ Nilai dari const harus sudah diketahui saat compile-time, sedangkan nilai final 
 6. Membuat if statement untuk menampilkan button decrement hanya jika counter tidak nol.
 
 
+</pre>
+</details>
+
+<details> 
+<summary>Tugas 8: Flutter Form</summary>
+<pre>
+# Tugas 8: Flutter Form
+
+## Jelaskan perbedaan Navigator.push dan Navigator.pushReplacement.
+Navigator.push akan menambahkan route ke dalam navigator stack dan dapat kembali ke route sebelumnya dengan menggunakan Navigator.pop. Di sisi lain, Navigator.pushReplacement akan menambahkan route baru dan menghapus route sebelum-sebelumnya. 
+
+## Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+- Drawer: 
+- Column:
+- Row:
+- ListTile:
+- SingleChildScrollView:
+- Container:
+- DropdownButtonFormField:
+- TextFormField:
+
+## Sebutkan jenis-jenis event yang ada pada Flutter (contoh: onPressed).
+- onPressed:
+- onTap: 
+- onChange: 
+
+## Jelaskan bagaimana cara kerja Navigator dalam "mengganti" halaman dari aplikasi Flutter.
+- 
+
+## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
 
 
-### Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+</pre>
+</details>

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:counter_7/drawer.dart';
 
 void main() {
   runApp(const MyApp());
@@ -61,7 +62,7 @@ class _MyHomePageState extends State<MyHomePage> {
       color = Colors.blue;
     }
   }
-  
+
   void _incrementCounter() {
     setState(() {
       // This call to setState tells the Flutter framework that something has
@@ -100,6 +101,7 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
+      drawer: drawerWidget(context),
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
@@ -128,31 +130,31 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-        floatingActionButton: Stack(
-            fit: StackFit.expand,
-            children: [
-              if (_counter != 0) Positioned(
-                left: 30,
-                bottom: 20,
-                child:
-                  FloatingActionButton(
-                  onPressed: _decrementCounter,
-                  tooltip: 'Decrement',
-                  child: const Icon(Icons.remove),
-                ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButton: Stack(
+        fit: StackFit.expand,
+        children: [
+          if (_counter != 0)
+            Positioned(
+              left: 30,
+              bottom: 20,
+              child: FloatingActionButton(
+                onPressed: _decrementCounter,
+                tooltip: 'Decrement',
+                child: const Icon(Icons.remove),
               ),
-              Positioned(
-                right: 30,
-                bottom: 20,
-                child: FloatingActionButton(
-                  onPressed: _incrementCounter,
-                  tooltip: 'Increment',
-                  child: const Icon(Icons.add),
-                ),
-              ),
-            ],
-          ), // This trailing comma makes auto-formatting nicer for build methods.
+            ),
+          Positioned(
+            right: 30,
+            bottom: 20,
+            child: FloatingActionButton(
+              onPressed: _incrementCounter,
+              tooltip: 'Increment',
+              child: const Icon(Icons.add),
+            ),
+          ),
+        ],
+      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
