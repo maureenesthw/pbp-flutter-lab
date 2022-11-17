@@ -1,6 +1,7 @@
 <details> 
 <summary>Tugas 7: Elemen Dasar Flutter</summary>
 <pre>
+
 # Tugas 7: Elemen Dasar Flutter
 
 ## Jelaskan apa yang dimaksud dengan stateless widget dan stateful widget dan jelaskan perbedaan dari keduanya.
@@ -37,6 +38,7 @@ Nilai dari const harus sudah diketahui saat compile-time, sedangkan nilai final 
 <details> 
 <summary>Tugas 8: Flutter Form</summary>
 <pre>
+
 # Tugas 8: Flutter Form
 
 ## Jelaskan perbedaan Navigator.push dan Navigator.pushReplacement.
