@@ -1,6 +1,7 @@
 <details> 
 <summary>Tugas 7: Elemen Dasar Flutter</summary>
 <pre>
+
 # Tugas 7: Elemen Dasar Flutter
 
 ## Jelaskan apa yang dimaksud dengan stateless widget dan stateful widget dan jelaskan perbedaan dari keduanya.
@@ -37,31 +38,35 @@ Nilai dari const harus sudah diketahui saat compile-time, sedangkan nilai final 
 <details> 
 <summary>Tugas 8: Flutter Form</summary>
 <pre>
+
 # Tugas 8: Flutter Form
 
 ## Jelaskan perbedaan Navigator.push dan Navigator.pushReplacement.
 Navigator.push akan menambahkan route ke dalam navigator stack dan dapat kembali ke route sebelumnya dengan menggunakan Navigator.pop. Di sisi lain, Navigator.pushReplacement akan menambahkan route baru dan menghapus route sebelum-sebelumnya. 
 
 ## Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
-- Drawer: 
-- Column:
-- Row:
-- ListTile:
-- SingleChildScrollView:
-- Container:
-- DropdownButtonFormField:
-- TextFormField:
+- Drawer: layar samping yang tidak terlihat. Ini adalah menu geser ke kiri yang umumnya berisi tautan penting dalam aplikasi dan menempati setengah layar saat ditampilkan.
+- ListTile: Widget ListTile digunakan untuk mengisi ListView di Flutter. Ini berisi judul serta ikon awal atau akhir.
+- SingleChildScrollView: Sebuah kotak di mana satu widget dapat di-scroll.
+- DropdownButtonFormField: widget yang membungkus widget Dropdown dan memungkinkan untuk mengubah estetika visual dan menambahkan validasi pada tombol dropdown.
+- TextFormField: membungkus TextField dan mengintegrasikannya dengan Formulir terlampir. Ini menyediakan fungsionalitas tambahan, seperti validasi dan integrasi dengan widget FormField lainnya.
+- Container: widget yang menggabungkan common painting, positioning, dan widgets sizing. 
+- Column: Column widget ini memungkinkan untuk align children secara horizontal dan vertikal sesuai kebutuhan.
+- Row: memungkinkan untuk meng-align childs secara horizontal atau vertikal sesuai dengan kebutuhan.
 
 ## Sebutkan jenis-jenis event yang ada pada Flutter (contoh: onPressed).
-- onPressed:
-- onTap: 
-- onChange: 
+- onPressed
+- onTap
+- onChange
 
 ## Jelaskan bagaimana cara kerja Navigator dalam "mengganti" halaman dari aplikasi Flutter.
-- 
+Navigator mengelola stack dari objek-objek Route dan menyediakan dua cara untuk mengelola stack, Navigator.pages atau Navigator.push dan Navigator.pop.
 
 ## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
-
+1. Membuat objek budget pada file budget.dart
+2. Membuat page add budget
+3. membuat page data budget
+4. Membuat objek drawer berisi navigator untuk pindah dari satu page ke yang lain pada file drawer.dart
 
 </pre>
 </details>
