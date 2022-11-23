@@ -70,3 +70,42 @@ Navigator mengelola stack dari objek-objek Route dan menyediakan dua cara untuk 
 
 </pre>
 </details>
+
+
+<details> 
+<summary>Tugas 9: Integrasi Web Service pada Flutter</summary>
+<pre>
+
+# Tugas 9: Integrasi Web Service pada Flutter
+
+## Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+Ya, kita bisa melakukan pengambilan data JSON tanpa membuat model terlebih dahulu. Sebaiknya menentukan model terlebih dahulu agar data yang didapat mempunyai struktur yang baik dan mudah untuk digunakan.
+
+## Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+- Scaffold: menyediakan struktur dasar dan styling dalam aplikasi
+- Text: Display string dalam satu baris
+- AppBar: display toolbar widgets, seperti title dan actions
+- Padding: widget yang insets child dengan memberikan padding
+- Drawer: Panel Desain Material yang meluncur secara horizontal dari tepi Scaffold  untuk menampilkan tautan navigasi dalam aplikasi.
+- ListView: Display children satu persatu dalam scrolling direction
+- SizedBox: Sebuah kotak dengan ukuran tertentu. Jika diberikan anak, widget ini memaksa anaknya untuk memiliki lebar dan/atau tinggi tertentu
+- Container: Widget kenyamanan yang menggabungkan lukisan umum, penentuan posisi, dan widget ukuran.
+- Column: Display children dalam format vertikal
+
+## Jelaskan mekanisme pengambilan data dari json hingga dapat ditampilkan pada Flutter.
+1. Menambahkan depedensi http
+2. Membuat model sesuai json yang akan di get
+3. Melakukan HTTP request dengan method GET
+4. Response didecode menjadi JSON kemudian dikonversi menjadi model yang dibuat
+5. Menampilkan data dengan memanfaatkan FutureBuilder
+
+## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+1. Menambahkan watchlist pada listview drawer
+2. Membuat model yang sesuai untuk data json mywatchlist
+3. Membuat function untuk fetch data json watchlist dari app heroku
+4. Menampilkan data pada My Watch List Page
+5. Membuat page detail untuk watchlist
+
+
+</pre>
+</details>
