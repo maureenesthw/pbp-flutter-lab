@@ -38,7 +38,7 @@ Drawer drawerWidget(BuildContext context) {
           },
         ),
         ListTile(
-          title: const Text('My Watchlist'),
+          title: const Text('My Watch List'),
           onTap: () {
             Navigator.pushReplacement(
               context,

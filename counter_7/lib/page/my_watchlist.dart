@@ -4,6 +4,7 @@ import 'dart:convert';
 import 'package:counter_7/model/watchlist.dart';
 import 'package:counter_7/drawer.dart';
 import 'package:counter_7/page/watchlist_detail.dart';
+import 'package:counter_7/function/fetch_watchlist.dart';
 
 class MyWatchlistPage extends StatefulWidget {
   const MyWatchlistPage({Key? key}) : super(key: key);
@@ -13,30 +14,30 @@ class MyWatchlistPage extends StatefulWidget {
 }
 
 class _WatchlistPageState extends State<MyWatchlistPage> {
-  Future<List<Watchlist>> fetchWatchlist() async {
-    var url =
-        Uri.parse('https://tugas2-pbp-maureen.herokuapp.com/mywatchlist/json/');
-    var response = await http.get(
-      url,
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-        "Content-Type": "application/json",
-      },
-    );
+  // Future<List<Watchlist>> fetchWatchlist() async {
+  //   var url =
+  //       Uri.parse('https://tugas2-pbp-maureen.herokuapp.com/mywatchlist/json/');
+  //   var response = await http.get(
+  //     url,
+  //     headers: {
+  //       "Access-Control-Allow-Origin": "*",
+  //       "Content-Type": "application/json",
+  //     },
+  //   );
 
-    // melakukan decode response menjadi bentuk json
-    var data = jsonDecode(utf8.decode(response.bodyBytes));
+  //   // melakukan decode response menjadi bentuk json
+  //   var data = jsonDecode(utf8.decode(response.bodyBytes));
 
-    // melakukan konversi data json menjadi object ToDo
-    List<Watchlist> listWatchlist = [];
-    for (var d in data) {
-      if (d != null) {
-        listWatchlist.add(Watchlist.fromJson(d));
-      }
-    }
+  //   // melakukan konversi data json menjadi object ToDo
+  //   List<Watchlist> listWatchlist = [];
+  //   for (var d in data) {
+  //     if (d != null) {
+  //       listWatchlist.add(Watchlist.fromJson(d));
+  //     }
+  //   }
 
-    return listWatchlist;
-  }
+  //   return listWatchlist;
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -72,9 +73,26 @@ class _WatchlistPageState extends State<MyWatchlistPage> {
                       decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(15.0),
+                          border: Border.all(
+                            color: snapshot.data![index].fields.watched
+                                ? Color.fromARGB(255, 76, 188, 165)
+                                : Color.fromARGB(255, 197, 57, 169),
+                            width: 3,
+                          ),
                           boxShadow: const [
                             BoxShadow(color: Colors.black, blurRadius: 2.0)
                           ]),
+                      // child: Card(
+                      //   shape: RoundedRectangleBorder(
+                      //     borderRadius:
+                      //         BorderRadius.circular(10), // if you need this
+                      //     side: BorderSide(
+                      //       color: snapshot.data![index].fields.watched
+                      //           ? Color.fromARGB(255, 76, 188, 165)
+                      //           : Color.fromARGB(255, 197, 57, 169),
+                      //       width: 2,
+                      //     ),
+                      //   ),
                       child: GestureDetector(
                         onTap: () => Navigator.push(
                           context,
@@ -90,6 +108,17 @@ class _WatchlistPageState extends State<MyWatchlistPage> {
                             ),
                           ),
                         ),
+                        // child: Card(
+                        //   shape: RoundedRectangleBorder(
+                        //     borderRadius:
+                        //         BorderRadius.circular(10), // if you need this
+                        //     side: BorderSide(
+                        //       color: snapshot.data![index].fields.watched
+                        //           ? Color.fromARGB(255, 76, 188, 165)
+                        //           : Color.fromARGB(255, 197, 57, 169),
+                        //       width: 2,
+                        //     ),
+                        //   ),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -103,9 +132,19 @@ class _WatchlistPageState extends State<MyWatchlistPage> {
                             ),
                             const SizedBox(height: 10),
                             Text("${snapshot.data![index].fields.watched}"),
+                            Checkbox(
+                              value: snapshot.data![index].fields.watched,
+                              onChanged: (bool? newValue) {
+                                setState(() {
+                                  snapshot.data![index].fields.watched =
+                                      !snapshot.data![index].fields.watched;
+                                });
+                              },
+                            ),
                           ],
                         ),
                       ),
+                      // ),
                     ),
                   );
                 }
